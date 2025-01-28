@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: dedinededin/flask-app:aa49288d7a03b064df7a76d20907a16b289e508b
+        image: dedinededin/flask-app:31396105149b2de72553286ba41b9b2d2e0e8f9e
         resources:
           requests:
             memory: "128Mi"
