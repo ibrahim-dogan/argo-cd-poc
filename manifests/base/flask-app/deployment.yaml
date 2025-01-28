@@ -16,4 +16,4 @@ spec:
       - name: flask-app
         image: dedinededin/flask-app:b74edb444397b8d681130f3c43284c63ab052891
         ports:
-        - containerPort: 80
+        - containerPort: 80 
