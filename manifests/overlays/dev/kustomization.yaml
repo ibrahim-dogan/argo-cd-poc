@@ -5,7 +5,8 @@ namePrefix: dev-
 namespace: development
 
 resources:
-  - ../../base
+  - ../../nginx.yaml    # Comment out to disable nginx
+  - ../../flask-app.yaml  # Comment out to disable flask-app
 
 patches:
   - path: nginx-patch.yaml

@@ -8,6 +8,7 @@ spec:
     spec:
       containers:
       - name: flask-app
+        image: dedinededin/flask-app:b74edb444397b8d681130f3c43284c63ab052891  # This will be updated by the pipeline
         resources:
           requests:
             memory: "256Mi"
