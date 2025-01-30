@@ -8,7 +8,9 @@ spec:
   source:
     repoURL: https://github.com/ibrahim-dogan/argo-cd-poc.git
     targetRevision: HEAD
-    path: manifests/node-express/dev
+    path: apps/dev
+    directory:
+      include: node-express.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: dev

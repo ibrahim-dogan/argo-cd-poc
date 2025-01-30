@@ -8,7 +8,9 @@ spec:
   source:
     repoURL: https://github.com/ibrahim-dogan/argo-cd-poc.git
     targetRevision: HEAD
-    path: manifests/http-echo/prod
+    path: apps/prod
+    directory:
+      include: http-echo.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: prod

@@ -8,7 +8,9 @@ spec:
   source:
     repoURL: https://github.com/ibrahim-dogan/argo-cd-poc.git
     targetRevision: HEAD
-    path: manifests/todomvc-app/prod
+    path: apps/prod
+    directory:
+      include: todomvc-app.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: prod
