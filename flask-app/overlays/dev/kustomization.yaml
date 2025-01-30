@@ -4,6 +4,4 @@ kind: Kustomization
 namespace: dev
 resources:
   - ../../base
-
-patchesStrategicMerge:
-- application-patch.yaml 
+  - application.yaml 

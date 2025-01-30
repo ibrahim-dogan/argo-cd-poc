@@ -11,7 +11,7 @@ spec:
     path: .
     directory:
       recurse: true
-      include: "*/overlays/dev/application-patch.yaml"
+      include: "*/overlays/dev/application.yaml"
   destination:
     server: https://kubernetes.default.svc
     namespace: default
