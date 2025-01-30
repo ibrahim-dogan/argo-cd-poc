@@ -4,5 +4,7 @@ kind: Kustomization
 namespace: dev
 resources:
   - ../../base
-  - flask-patch.yaml 
   - application.yaml 
+
+patches:
+  - path: flask-patch.yaml 
