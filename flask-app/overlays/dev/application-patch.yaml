@@ -9,4 +9,5 @@ spec:
     repoURL: https://github.com/ibrahim-dogan/argo-cd-poc.git
     path: flask-app/overlays/dev
   destination:
+    server: https://kubernetes.default.svc
     namespace: dev 
