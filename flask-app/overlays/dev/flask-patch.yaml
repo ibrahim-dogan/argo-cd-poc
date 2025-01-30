@@ -3,16 +3,17 @@ kind: Deployment
 metadata:
   name: flask-app
 spec:
-  replicas: 1
   template:
     spec:
       containers:
       - name: flask-app
-        image: dedinededin/flask-app:31396105149b2de72553286ba41b9b2d2e0e8f9e
         resources:
           requests:
-            memory: "128Mi"
+            memory: "64Mi"
             cpu: "100m"
           limits:
-            memory: "256Mi"
-            cpu: "200m" 
+            memory: "128Mi"
+            cpu: "200m"
+        env:
+        - name: ENVIRONMENT
+          value: "development" 

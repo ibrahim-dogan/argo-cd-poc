@@ -3,16 +3,18 @@ kind: Deployment
 metadata:
   name: flask-app
 spec:
-  replicas: 3  # Increased replicas for production
+  replicas: 3
   template:
     spec:
       containers:
       - name: flask-app
-        image: dedinededin/flask-app:b74edb444397b8d681130f3c43284c63ab052891  # This will be updated by the pipeline
         resources:
           requests:
             memory: "256Mi"
-            cpu: "200m"
+            cpu: "500m"
           limits:
             memory: "512Mi"
-            cpu: "500m" 
+            cpu: "1000m"
+        env:
+        - name: ENVIRONMENT
+          value: "production" 
