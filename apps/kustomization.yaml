@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - common
+  - flask-app/flask-application.yaml
+  - nginx/nginx-application.yaml
+  - root-app/root-application.yaml 
