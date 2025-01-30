@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
       - name: game-2048
-        image: alexwhen/docker-2048
+        image: ghcr.io/mdn1023/2048-docker:latest
         ports:
         - containerPort: 80 
