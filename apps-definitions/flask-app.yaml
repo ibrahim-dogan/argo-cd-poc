@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx
+  name: flask-app
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: $(REPO_URL)
+    repoURL: https://github.com/ibrahim-dogan/argo-cd-poc.git  # Update this with your repo URL
     targetRevision: HEAD
-    path: manifests/base/nginx
+    path: applications/overlays/dev/flask-app  # This will be environment-specific
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: flask-app
   syncPolicy:
     automated:
       prune: true

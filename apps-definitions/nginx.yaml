@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-application
+  name: nginx
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: $(REPO_URL)
-    targetRevision: new_structure
-    path: apps
+    repoURL: https://github.com/ibrahim-dogan/argo-cd-poc.git  # Update this with your repo URL
+    targetRevision: HEAD
+    path: applications/overlays/dev/nginx  # This will be environment-specific
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: nginx
   syncPolicy:
     automated:
       prune: true
