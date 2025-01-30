@@ -1,20 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prod-apps
+  name: flask-app
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/ibrahim-dogan/argo-cd-poc.git
     targetRevision: HEAD
-    path: apps/prod
+    path: flask-app/overlays/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: prod
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true 
+    namespace: dev 
