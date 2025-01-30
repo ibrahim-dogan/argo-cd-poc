@@ -11,4 +11,8 @@ spec:
     path: flask-app/overlays/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev 
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true 
