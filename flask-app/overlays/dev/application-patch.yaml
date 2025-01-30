@@ -3,7 +3,9 @@ kind: Application
 metadata:
   name: flask-app
 spec:
+  project: default
   source:
+    repoURL: https://github.com/ibrahim-dogan/argo-cd-poc.git
     path: flask-app/overlays/dev
   destination:
     namespace: dev 
