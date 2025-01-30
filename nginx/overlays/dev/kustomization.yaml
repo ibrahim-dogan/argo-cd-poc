@@ -4,4 +4,5 @@ kind: Kustomization
 namespace: dev
 resources:
   - ../../base
+  - nginx-patch.yaml 
   - application.yaml 
