@@ -12,6 +12,7 @@ spec:
     directory:
       recurse: true
       include: "*/overlays/dev/application.yaml"
+    kustomize: {}
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
